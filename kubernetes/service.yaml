@@ -2,16 +2,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: gab-app-service
+  name: cicd-app-service
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-ipv6: "false"  # Ensures IPv6 is disabled
   labels:
-    app: gab-app
+    app: cicd-app
     environment: ""
 spec:
   type: LoadBalancer  # Exposes the service via an external load balancer (for public access)
   selector:
-    app: gab-app
+    app: cicd-app
   ports:
     - protocol: TCP
       port: 80         # External port for the service
