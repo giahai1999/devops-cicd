@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cicd-app-deployment
+  labels:
+    app: cicd-app
+    environment: "dev"  # Default value, can be set in the pipeline
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cicd-app
+  template:
+    metadata:
+      labels:
+        app: cicd-app
+        environment: "dev"  # Default value, can be set in the pipeline
+    spec:
+      containers:
+        - name: cicd-app-container
+          image: ""
+          ports:
+            - containerPort: 80
+          env:
+            - name: ENVIRONMENT
+              value: "dev"  # Can be set from the pipeline
+      imagePullSecrets:
+        - name: cicd-app-secret
