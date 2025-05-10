@@ -33,6 +33,7 @@ I manufacture a CICD pipeline to automate build, test, analyzation and deploymen
 │   └── test_healthcheck.py
 ├── run.sh
 └── README.md
+```
 
 ---
 
