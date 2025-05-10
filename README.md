@@ -40,7 +40,7 @@ I manufacture a CICD pipeline to automate build, test, analyzation and deploymen
 ## Terraform to deploy infrastructure
 
 Terraform Workspaces helps you manage multiple groups of resources with a single configuration.
-Two terraform workspaces which are dev and prod will be created. We need to deploy first to the dev , test our APP after deployment, if everything is perfect and fine, then we destroy the resources before finally deploying to prod. because of we want to save resource usage and extra charges it may incure.
+Two terraform workspaces which are dev and prod will be created. We need to deploy first to the dev , test our APP after deployment, if everything is perfect and fine, then we destroy the resources before finally deploying to prod. Because of we want to save resource usage and extra charges it may incure.
 
 
 ---
@@ -83,12 +83,12 @@ Create a folder named kubernetes , this folder should have three files.
 
 ## Secrets for Github Actions
 
-AWS_ACCOUNT_ID
-AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY
-AWS_REGION
-ECR_REPOSITORY_DEV
-ECR_REPOSITORY_PROD
+1. AWS_ACCOUNT_ID
+2. AWS_ACCESS_KEY_ID
+3. AWS_SECRET_ACCESS_KEY
+4. AWS_REGION
+5. ECR_REPOSITORY_DEV
+6. ECR_REPOSITORY_PROD
 
 ---
 
